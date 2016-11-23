@@ -5,8 +5,7 @@
 
 /** @file
  * accessingFixedMemory.c
- * This Exmaple shows you how to access fixed memory form a given location 
-   Store a value of 0xA5A5 at a location 0x45676 
+ * This Exmaple shows use of keyword static 
  */
 
 /******************************************************
@@ -39,6 +38,8 @@
  *               Function Declarations
  ******************************************************/
 
+static int add_two_values(int a, int b);
+
 /******************************************************
  *            Interrupt Handlers Mapping
  ******************************************************/
@@ -56,13 +57,24 @@
  */
 int main(int argc, char *argv)
 {
+  int alpha = 40;
+  int beata = 70;
 
-    int *ptr;             // create a pointer
-    ptr = (int *)0x45676; // refrence to a lcoation i.e. 0x45676
-    *ptr = 0xA5A5;        // store value 0xA5A5
+  printf("adding vlaues %d and %d is %d \n", alpha, beata, add_two_values(alpha, beata));
 
-    // you can also do this in one step
-    *(int *const)0x45676 = 0xA5A5;
+  printf("adding vlaues %d and %d is %d \n", alpha, beata, add_two_values(alpha, beata));
 
-    return 0;
+  printf("adding vlaues %d and %d is %d \n", alpha, beata, add_two_values(alpha, beata));
+  
+  printf("adding vlaues %d and %d is %d \n", alpha, beata, add_two_values(alpha, beata));
+
+  return 0;
+}
+// static function becomes local to c file
+// static variables keep the value alive
+
+static int add_two_values(int a, int b)
+{
+  static int i = 0;
+  return (a + b + i++);
 }

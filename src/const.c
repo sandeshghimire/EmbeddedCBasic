@@ -60,8 +60,8 @@ int main(int argc, char *argv)
     int const aa = 0xA5A5; // same as above  aa value cannot be changed, vlaue is stored in ROM
 
     int *FreePtr = (int *)0x888888;
-    FreePtr = 0x888845;
-    *FreePtr = 0x888845;
+    FreePtr = (int *) 0x888845;
+    *FreePtr = (int) 0x888845;
 
     const int *aPtr = (const int *)0x8888; // pointer pointing to a constant vlaue, value cannot be changed but pointer can
     aPtr = (int *)0x8888;                  // pass - since the pointer can point to another location
