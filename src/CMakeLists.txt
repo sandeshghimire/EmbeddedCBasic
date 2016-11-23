@@ -1,2 +1,12 @@
-add_executable(example, example.c)
+add_executable(	accessingFixedMemory	accessingFixedMemory.c	)
+add_executable(	clearBits	clearBits.c	)
+add_executable(	const	const.c	)
+add_executable(	dataDeclarations	dataDeclarations.c	)
+add_executable(	infiniteLoops	infiniteLoops.c	)
+add_executable(	interruptsHandling	interruptsHandling.c	)
+add_executable(	preprocessor	preprocessor.c	)
+add_executable(	setBits	setBits.c	)
+add_executable(	static	static.c	)
+add_executable(	toggleBits	toggleBits.c	)
+add_executable(	typedefExample	typedefExample.c	)
 
