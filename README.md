@@ -1,5 +1,5 @@
 # Basic embedded  C examples 
-
+```
 Set Bit
 Clear Bit
 Toggle Bit
@@ -11,3 +11,5 @@ Static Variables / Functions
 Typedef Example
 Interrupts Handling
 Preprocessor
+
+```
