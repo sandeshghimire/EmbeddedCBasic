@@ -5,7 +5,7 @@
 
 /** @file
  * clearBits.c
- * This Exmaple shows how to clear a bit from a unigned int vlaue
+ * This Exmaple shows how to clear a bit from a unigned int 
  */
 
 /******************************************************
@@ -77,7 +77,7 @@ int main(int argc, char* argv)
  * @param bit[in]        : The bit index
  *
  * @note: This is not a generic function and does not support all architecture 
- * @bugs: No protection for bits greater than 32 bits 
+ * @bugs: No protection for bits greater than 32  
  *
  * @return the bit cleard value 
  *
