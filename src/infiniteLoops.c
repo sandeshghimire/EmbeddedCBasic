@@ -5,8 +5,8 @@
 
 /** @file
  * accessingFixedMemory.c
- * This Exmaple shows you how to access fixed memory form a given location 
-   Store a value of 0xA5A5 at a location 0x45676 
+ * This Exmaple shows various ways to create infinite loop in c 
+
  */
 
 /******************************************************
@@ -57,12 +57,22 @@
 int main(int argc, char *argv)
 {
 
-    int *ptr;             // create a pointer
-    ptr = (int *)0x45676; // refrence to a lcoation i.e. 0x45676
-    *ptr = 0xA5A5;        // store value 0xA5A5
+  // loop using while
 
-    // you can also do this in one step
-    *(int *const)0x45676 = 0xA5A5;
+  while (1)
+  {
+  }
 
-    return 0;
+  // loop using for
+
+  for (;;)
+  {
+  }
+
+// loop using go to
+
+LOOP:
+  goto LOOP;
+
+  return 0;
 }
