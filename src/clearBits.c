@@ -14,7 +14,6 @@
 
 #include <stdio.h>
 
-
 /******************************************************
  *                      Macros
  ******************************************************/
@@ -41,16 +40,13 @@
 
 unsigned int clear_bit(unsigned int value, unsigned char bit);
 
- /******************************************************
+/******************************************************
  *            Interrupt Handlers Mapping
  ******************************************************/
 
 /******************************************************
  *               Variables Definitions
  ******************************************************/
-
-
-
 
 /******************************************************
  *               Function Definitions
@@ -59,7 +55,7 @@ unsigned int clear_bit(unsigned int value, unsigned char bit);
 /**
  * Main entry point for clearBits 
  */
-int main(int argc, char* argv)
+int main(int argc, char *argv)
 {
     unsigned int data = 0x55;
     unsigned char bit = 6;
@@ -68,7 +64,6 @@ int main(int argc, char* argv)
 
     return 0;
 }
-
 
 /**
  * Clear a bit from a unigned int vlaue
@@ -84,6 +79,6 @@ int main(int argc, char* argv)
  */
 unsigned int clear_bit(unsigned int value, unsigned char bit)
 {
-    value &= ~(1 << bit) ;
+    value &= ~(1 << bit);
     return value;
 }
